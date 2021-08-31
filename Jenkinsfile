@@ -8,8 +8,8 @@ pipeline {
     stage ('Build') {
       steps {
         UiPathPack (
-          outputPath: "Output\\${env.BUILD_NUMBER}",
-          projectJsonPath: "UiBank\\project.json",
+          outputPath: "E:\Sandeep\UiPath_Jenkins_CICD_output",
+          projectJsonPath: "project.json",
           version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.${env.BUILD_NUMBER}"]
           useOrchestrator: true,
           traceLoggingLevel: "None",
